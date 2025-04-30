@@ -1,3 +1,3 @@
 import css from "./Feedback.module.css";
 
-export default function Feedback({ feedback }) {
+export default function Feedback({ feedback }) {}
