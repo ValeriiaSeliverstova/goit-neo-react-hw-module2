@@ -21,17 +21,25 @@ function App() {
     localStorage.setItem("feedback", JSON.stringify(feedback));
   }, [feedback]);
 
-  const handleFeedback = (option) => {
-    setFeedback((prevFeedback) => ({
-      ...prevFeedback,
-      [option]: prevFeedback[option] + 1,
-    }));
+  const updateFeedback = (feedbackType) => {
+    if (feedbackType === "reset") {
+      setFeedback({
+        good: 0,
+        neutral: 0,
+        bad: 0,
+      });
+    } else {
+      setFeedback((prevFeedback) => ({
+        ...prevFeedback,
+        [feedbackType]: prevFeedback[feedbackType] + 1,
+      }));
+    }
   };
 
   return (
     <div>
       <Description />
-      <Options />
+      <Options handleFeedback={updateFeedback} />
       <Feedback />
     </div>
   );
