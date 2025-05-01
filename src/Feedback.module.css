@@ -1,7 +1,8 @@
 .feedback-section {
+  margin-top: 5px;
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 10px;
 }
 
 .feedback {
