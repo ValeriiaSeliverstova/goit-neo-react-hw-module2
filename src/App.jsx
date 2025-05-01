@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Description from "./Description";
 import Options from "./Options";
 import Feedback from "./Feedback";
+import Notification from "./Notification";
 
 function App() {
   const [feedback, setFeedback] = useState({
@@ -43,11 +44,15 @@ function App() {
     <div>
       <Description />
       <Options updateFeedback={updateFeedback} totalFeedback={totalFeedback} />
-      <Feedback
-        feedback={feedback}
-        totalFeedback={totalFeedback}
-        positivePercentage={positivePercentage}
-      />
+      {totalFeedback === 0 ? (
+        <Notification />
+      ) : (
+        <Feedback
+          feedback={feedback}
+          totalFeedback={totalFeedback}
+          positivePercentage={positivePercentage}
+        />
+      )}
     </div>
   );
 }
