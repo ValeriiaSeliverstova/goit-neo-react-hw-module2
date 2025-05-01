@@ -1,10 +1,10 @@
-.feedback-section {
+.feedback {
   margin-top: 5px;
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 
-.feedback {
+.feedback-item {
   margin: 0;
 }

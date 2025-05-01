@@ -6,12 +6,12 @@ export default function Feedback({
   positivePercentage,
 }) {
   return (
-    <div className={css.feedbackSection}>
-      <p className={css.feedback}>Good: {feedback.good}</p>
-      <p className={css.feedback}>Neutral: {feedback.neutral}</p>
-      <p className={css.feedback}>Bad: {feedback.bad}</p>
-      <p className={css.feedback}>Total: {totalFeedback}</p>
-      <p className={css.feedback}>Positive: {positivePercentage}%</p>
+    <div className={css.feedback}>
+      <p className={css["feedback-item"]}>Good: {feedback.good}</p>
+      <p className={css["feedback-item"]}>Neutral: {feedback.neutral}</p>
+      <p className={css["feedback-item"]}>Bad: {feedback.bad}</p>
+      <p className={css["feedback-item"]}>Total: {totalFeedback}</p>
+      <p className={css["feedback-item"]}>Positive: {positivePercentage}%</p>
     </div>
   );
 }
