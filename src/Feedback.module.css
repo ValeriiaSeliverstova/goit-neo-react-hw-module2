@@ -1,5 +1,9 @@
-.feedback {
+.feedback-section {
   display: flex;
   flex-direction: column;
   gap: 5px;
+}
+
+.feedback {
+  margin: 0;
 }
